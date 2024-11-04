@@ -1,8 +1,8 @@
 # use your own Lumoz reward_address
-reward_address=0xxxxx...
+reward_address=0x9edba4dff69d23546be7dc0ac79575f2cbaa80ea
 
 # set your own custom name
-custom_name="myprover"
+custom_name="coinowo"
 
 pids=$(ps -ef | grep moz_prover | grep -v grep | awk '{print $2}')
 if [ -n "$pids" ]; then
