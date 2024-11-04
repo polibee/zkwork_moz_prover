@@ -5,6 +5,9 @@ pool_address=moz.asia.zk.work:10010
 
 ## Release-notes
 
+- moz_prover 1.0.1
+  - Add hiveos
+
 - moz_prover 1.0.0
   - First moz_prover version for Lumoz testnet
 
@@ -34,11 +37,26 @@ Oneline command to start:
 
 ### On Ubuntu
 
-1. Get an Lumoz wallet address.
-2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.0/moz_prover_cuda.tar.gz`.
-3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.0/moz_prover_ocl.tar.gz`.
-4. On Nvidia: `tar -zvxf moz_prover_cuda.tar.gz && cd moz_prover`, on AMD: `tar -zvxf moz_prover_ocl.tar.gz && cd moz_prover`.
+1. Get a Lumoz wallet address.
+2. Download zkwork Nvidia miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_cuda.tar.gz`.
+3. Download zkwork AMD miner: `wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_ocl.tar.gz`.
+4. On Nvidia: `tar -zvxf moz_prover-v1.0.1_cuda.tar.gz && cd moz_prover`, on AMD: `tar -zvxf moz_prover-v1.0.1_ocl.tar.gz && cd moz_prover`.
 5. Update your Lumoz address in `inner_prover.sh` and set custom name for mining server.
 6. Start mining with `sudo chmod +x run_prover.sh && ./run_prover.sh`.
 7. Check mining log with `tail -f prover.log`.
 
+### On HiveOS 
+
+1. Choose your download url for your gpu.
+  ```
+  DOWNLOAD_URL for Nvidia: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_cuda.tar.gz
+  DOWNLOAD_URL for AMD: https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_ocl.tar.gz
+  ```
+2. Get a Lumoz wallet address.
+3. Add New Flight Sheet with config as follows.
+
+Configuration:
+- Installation URL: DOWNLOAD_URL
+- Wallet and worker template: %WAL%
+
+3. Start Flight Sheet
